@@ -84,8 +84,7 @@ namespace CapstoneTelevision.Data
                 .HasOne(c => c.Editor)
                 .WithMany()
                 .HasForeignKey(c => c.EditorId)
-                .OnDelete(DeleteBehavior.Restrict); // Avoid cascading deletes if an editor is deleted
-
+                .OnDelete(DeleteBehavior.Restrict); 
             // Advertisement Table Relationships
             modelBuilder.Entity<Advertisement>()
                 .HasOne(a => a.AssignedShow)
